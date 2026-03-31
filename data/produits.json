@@ -5,7 +5,7 @@
         "desc" : "Lightsitck officiel du groupe BTS",
         "prix" : "399.99€",
         "note" : 4,
-        "pic" : "images/images.png"    
+        "pic" : "images/lightstick.jpg"    
     },
     {
         "id" : 2,
@@ -13,14 +13,14 @@
         "desc" : "Peluche de la mascotte du groupe ATEEZ",
         "prix" : "19.99€",
         "note" : 2,
-        "pic" : "images/images.png"
+        "pic" : "images/peluche.jpg"
     },
     {
         "id" : 3,
         "nom" : "T-Shirt Gagnam Style",
-        "desc" : "Heeeeey sexy lady",
+        "desc" : "T-shirt gagnam style taille L 100% coton",
         "prix" : "67.67€",
         "note" : 5 ,
-        "pic" : "images/images.png"
+        "pic" : "images/horse.webp"
     }
 ]
