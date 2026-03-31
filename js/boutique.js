@@ -56,3 +56,10 @@ function remplirBoutique(arr){
         affichage.append(card)
     });
 }
+
+function clearBoutique(){
+    const boutique = document.getElementById('affichage')
+    while(boutique.lastChild){
+        boutique.removeChild(boutique.lastChild)
+    }
+}
