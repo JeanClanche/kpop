@@ -23,6 +23,25 @@ function remplirBoutique(arr){
         titre.textContent = e['nom']
         titre.classList.add('card-title')
 
+        const note = document.createElement('div')
+        const txtNote = document.createElement('span')
+        console.log(e['note'])
+        if(typeof((e['note']) == "number") && (e['note']>=0) && (e['note'] <= 5)){
+            for(let i = 0 ; i < 5 ; i++){
+                const star = document.createElement('i')
+                star.classList.add('fa-star')
+                if(i < e['note']){
+                    star.classList.add('fa-solid')
+                }else{
+                    star.classList.add('fa-regular')
+                }
+                txtNote.append(star)
+            }
+            note.append(txtNote)
+        }else{
+            console.log('a')
+        }
+
         const prix = document.createElement('span')
         prix.textContent = e['prix']
         prix.classList.add('fw-bold')
@@ -31,7 +50,7 @@ function remplirBoutique(arr){
         desc.textContent = e['desc']
         desc.classList.add('card-text')
 
-        body.append(titre, prix, desc)
+        body.append(titre, note, prix, desc)
         card.append(img, body)
 
         affichage.append(card)

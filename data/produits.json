@@ -3,12 +3,14 @@
         "nom" : "Lightsitck",
         "desc" : "Lightsitck officiel du groupe BTS",
         "prix" : "399.99€",
+        "note" : 3,
         "pic" : "images/images.png"    
     },
     {
         "nom" : "Peluche",
         "desc" : "Peluche de la mascotte du groupe ATEEZ",
         "prix" : "19.99€",
+        "note" : 5,
         "pic" : "images/images.png"
     }
 ]
