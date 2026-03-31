@@ -9,7 +9,7 @@ function remplirBoutique(arr){
 
     arr.forEach(e => {
         const card = document.createElement('div')
-        card.classList.add('card')
+        card.classList.add('card', 'm-3')
         card.setAttribute('style', 'width : 18rem;')
 
         const img = document.createElement('img')
@@ -23,11 +23,15 @@ function remplirBoutique(arr){
         titre.textContent = e['nom']
         titre.classList.add('card-title')
 
+        const prix = document.createElement('span')
+        prix.textContent = e['prix']
+        prix.classList.add('fw-bold')
+
         const desc = document.createElement('p')
         desc.textContent = e['desc']
         desc.classList.add('card-text')
 
-        body.append(titre, desc)
+        body.append(titre, prix, desc)
         card.append(img, body)
 
         affichage.append(card)
