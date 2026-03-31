@@ -1,11 +1,22 @@
-document.addEventListener('DOMContentLoaded', async function(){
-    const json = await fetch('data/produits.json')
-    const produits = JSON.parse(await json.text())
-    remplirBoutique(await produits)
+document.addEventListener('DOMContentLoaded', function(){
+    remplirBoutique()
 })
 
-function remplirBoutique(arr){
+async function remplirBoutique(){
+
     const affichage = document.getElementById('affichage')
+
+    const spin = document.createElement('div')
+    spin.classList.add('spinner-border')
+    spin.setAttribute('id', 'spin')
+    spin.setAttribute('style', 'width: 10rem; height: 10rem;')
+
+    clearBoutique()
+    affichage.append(spin)
+
+    const arr = await getProduits()
+    
+    affichage.removeChild(spin)
 
     arr.forEach(e => {
         const card = document.createElement('div')
@@ -25,7 +36,6 @@ function remplirBoutique(arr){
 
         const note = document.createElement('div')
         const txtNote = document.createElement('span')
-        console.log(e['note'])
         if(typeof((e['note']) == "number") && (e['note']>=0) && (e['note'] <= 5)){
             for(let i = 0 ; i < 5 ; i++){
                 const star = document.createElement('i')
@@ -38,8 +48,6 @@ function remplirBoutique(arr){
                 txtNote.append(star)
             }
             note.append(txtNote)
-        }else{
-            console.log('a')
         }
 
         const prix = document.createElement('span')
@@ -62,4 +70,11 @@ function clearBoutique(){
     while(boutique.lastChild){
         boutique.removeChild(boutique.lastChild)
     }
+}
+
+async function getProduits() {
+    const json = await fetch('data/produits.json')
+    const produits = JSON.parse(await json.text())
+
+    return await produits
 }
