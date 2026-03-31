@@ -58,6 +58,11 @@ async function remplirBoutique(){
         desc.textContent = e['desc']
         desc.classList.add('card-text')
 
+        const buy = document.createAttribute('button')
+        buy.classList.add('btn', 'btn-outline-info')
+        const buySpan = document.createElement('span')
+        buySpan.setAttribute
+
         body.append(titre, note, prix, desc)
         card.append(img, body)
 
