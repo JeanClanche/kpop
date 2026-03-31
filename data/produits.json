@@ -1,7 +1,12 @@
 [
     {
-        "id": 1,
-        "nom" : "article1",
-        "desc" : "description lorm ipsum lol"        
+        "nom" : "Lightsitck",
+        "desc" : "Lightsitck officiel du groupe BTS",
+        "pic" : "images/images.png"      
+    },
+    {
+        "nom" : "Peluche",
+        "desc" : "Peluche de la mascotte du groupe ATEEZ",
+        "pic" : "images/images.png"
     }
 ]
